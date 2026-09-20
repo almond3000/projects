@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import 'tailwindcss';
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --font-mono: var(--font-display);
+  --font-sans: var(--font-body);
+}
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #e2e2e2;
+  --card: #111111;
+  --card-foreground: #e2e2e2;
+  --primary: #4ade80;
+  --primary-foreground: #0a0a0a;
+  --secondary: #1a1a1a;
+  --secondary-foreground: #e2e2e2;
+  --muted: #1a1a1a;
+  --muted-foreground: #555555;
+  --accent: #4ade80;
+  --accent-foreground: #0a0a0a;
+  --border: #222222;
+  --ring: #4ade80;
+  --radius: 3px;
+
+  /* heatmap greens: dark→light as count increases */
+  --heat-0: #111111;
+  --heat-1: #14532d;
+  --heat-2: #166534;
+  --heat-3: #15803d;
+  --heat-4: #4ade80;
+
+  --font-display: 'JetBrains Mono', 'Courier New', monospace;
+  --font-body: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 3px; height: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: transparent; border-radius: 2px; }
+*:hover::-webkit-scrollbar-thumb { background: var(--border); }
+
+textarea:focus, input:focus, select:focus { outline: none; }
+
+input, select, textarea {
+  background: var(--card);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+}
+
+input::placeholder, textarea::placeholder { color: var(--muted-foreground); }
+
+select option { background: #111111; }
+
+/* ── animations ─────────────────────────────────────────────────────────── */
+
+@keyframes slide-from-right {
+  from { transform: translateX(48px); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+@keyframes slide-from-left {
+  from { transform: translateX(-48px); opacity: 0; }
+  to   { transform: translateX(0);     opacity: 1; }
+}
+@keyframes zoom-in {
+  from { transform: scale(0.94); opacity: 0; }
+  to   { transform: scale(1);    opacity: 1; }
+}
+@keyframes btn-bounce {
+  0%   { transform: scale(1); }
+  35%  { transform: scale(0.88); }
+  65%  { transform: scale(1.06); }
+  85%  { transform: scale(0.97); }
+  100% { transform: scale(1); }
+}
+
+.tab-slide-right { animation: slide-from-right 0.28s cubic-bezier(0.22,1,0.36,1) both; }
+.tab-slide-left  { animation: slide-from-left  0.28s cubic-bezier(0.22,1,0.36,1) both; }
+.zoom-in         { animation: zoom-in 0.24s cubic-bezier(0.22,1,0.36,1) both; }
+
+/* button press: scale down + darken, then small overshoot */
+button {
+  transition: transform 0.1s ease, filter 0.1s ease;
+}
+button:active {
+  filter: brightness(0.65);
+  animation: btn-bounce 0.32s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+
+/* day heatmap squares get a subtle scale on hover */
+.heat-sq {
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.heat-sq:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 0 1px var(--primary);
+}
+.heat-sq:active {
+  transform: scale(0.94);
+  filter: brightness(0.75);
+}
