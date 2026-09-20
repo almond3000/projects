@@ -8,6 +8,7 @@ My workspace for things I'm building. Each project has its own folder with code,
 |---|---|---|
 | [App](project-1/) | An app to organize my classes, professor contacts and significant dates. | 🔵 In progress |
 | [Drone](project-2/) | A surveillance drone i am attempting to make from scratch. | 🟡 Planning |
+| [Flight Calculator](flight-calculator) | Estimates drone flight time from battery and weight. | 🔵 In progress |
 
 ## How this repo is organized
 
