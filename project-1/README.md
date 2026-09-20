@@ -1,12 +1,11 @@
-# project-1
+# App
 
-> One-line description of what this project does.
-
-**Status:** 🟡 Planning  <!-- 🟡 Planning · 🔵 In progress · 🟢 Done · ⚪ Paused -->
-**Started:** 2026-09-20
+> A schedule organization app that includes a contact list, quick note section, weather section, and study timer to keep you on track.
+**Status:** 🔵 In progress  <!-- 🟡 Planning · 🔵 In progress · 🟢 Done · ⚪ Paused -->
+**Started:** 2026-09-16
 
 ## Why I'm building this
-What problem does it solve, or what do I want to learn from it?
+I always found that current apps offered on the app store don't provide everything i need in one app, i would need 3 apps to do things that all tie into eachother. Why not make one to rule them all?
 
 ## Tech stack
 - Language:
