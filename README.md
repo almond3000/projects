@@ -6,8 +6,8 @@ My workspace for things I'm building. Each project has its own folder with code,
 
 | Project | Description | Status |
 |---|---|---|
-| [project-1](project-1/) | _what it is_ | 🟡 Planning |
-| [project-2](project-2/) | _what it is_ | 🟡 Planning |
+| [App](project-1/) | An app to organize my classes, professor contacts and significant dates. | 🟢 Working on |
+| [Drone](project-2/) | A surveillance drone i am attempting to make from scratch. | 🟡 Planning |
 
 ## How this repo is organized
 
