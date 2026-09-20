@@ -8,13 +8,9 @@
 I always found that current apps offered on the app store don't provide everything i need in one app, i would need 3 apps to do things that all tie into eachother. Why not make one to rule them all?
 
 ## Tech stack
-- Language:
-- Tools / libraries:
+- Language: typescript
+- Tools / libraries: figma, my huge autismo brain, github copilot and vsc chat.
 
-## How to run it
-```bash
-# commands go here
-```
 
 ## Project layout
 ```
