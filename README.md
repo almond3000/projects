@@ -15,13 +15,13 @@ My workspace for things I'm building. Each project has its own folder with code,
 projects/
 ├── _template/        # copied by new-project.sh
 ├── new-project.sh    # ./new-project.sh my-idea
-├── project-1/
+├── App/
 │   ├── README.md
 │   ├── src/
 │   └── docs/
 │       ├── setup-log.md
 │       └── decisions/
-└── project-2/
+└── Drone/
 ```
 
 ## Starting a new project
